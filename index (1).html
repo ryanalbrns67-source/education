@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grammarly: أداة ذكية لتحسين كتابتك</title>
+<meta name="description" content="تعرّف على Grammarly، مساعد الكتابة بالذكاء الاصطناعي: ما هو، وما يقدمه، وهل هو مجاني، وهل يدعم العربية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F5F3; --ink:#0E2F30; --muted:#4E6566; --line:#CBD8D5;
+  --mark:#FFD84D; --err:#D13B3B; --ok:#1C7A5A; --white:#fff;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.9;font-size:18px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1040px;margin-inline:auto;padding-inline:24px}
+header{border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;padding-block:16px}
+nav b{font-size:20px}
+nav ul{display:flex;gap:24px;list-style:none;padding:0;font-size:16px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+
+/* Hero */
+.hero{padding-block:72px 56px}
+.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.3;font-weight:700;max-width:16ch}
+.hero p.lead{margin-top:20px;max-width:56ch;color:var(--muted)}
+.demo{margin-top:40px;background:var(--white);border:2px solid var(--ink);border-radius:6px;padding:28px;max-width:720px}
+.demo small{display:block;color:var(--muted);font-size:15px;margin-bottom:12px}
+.sentence{direction:ltr;text-align:left;font-size:24px;line-height:2;font-family:Georgia,"Times New Roman",serif}
+.fix{background:none;border:0;font:inherit;color:inherit;cursor:pointer;padding:0 2px;
+  text-decoration:underline wavy var(--err);text-underline-offset:6px}
+.fix.done{text-decoration:none;background:var(--mark);color:var(--ink)}
+.status{margin-top:16px;font-size:16px;color:var(--ok);min-height:1.9em}
+.btn{display:inline-block;margin-top:32px;background:var(--ink);color:var(--white);padding:14px 28px;border-radius:4px;text-decoration:none;font-weight:700}
+.btn:hover{background:#174a4c}
+
+/* Sections */
+section{padding-block:56px;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,4vw,36px);line-height:1.4;margin-bottom:20px}
+h3{font-size:20px;margin-bottom:6px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px 40px;margin-top:28px}
+.cols p{color:var(--muted);font-size:17px}
+.cols div{border-inline-start:4px solid var(--mark);padding-inline-start:16px}
+.text{max-width:62ch;color:var(--muted)}
+.note{background:var(--white);border:2px solid var(--ink);border-radius:6px;padding:24px 28px;max-width:720px}
+.note strong{background:var(--mark);padding:0 4px}
+.who{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin-top:20px}
+.who li{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:6px 18px;font-size:16px}
+.cta{text-align:center;padding-block:72px}
+.cta h2{max-width:20ch;margin-inline:auto}
+footer{border-top:1px solid var(--line);padding-block:24px;color:var(--muted);font-size:15px;text-align:center}
+@media(max-width:640px){nav ul{display:none}.hero{padding-block:48px 40px}.sentence{font-size:20px}.demo{padding:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="القائمة الرئيسية">
+      <b>Grammarly</b>
+      <ul>
+        <li><a href="#about">ما هو؟</a></li>
+        <li><a href="#features">المزايا</a></li>
+        <li><a href="#free">الأسعار</a></li>
+        <li><a href="#arabic">العربية</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Grammarly: أداة ذكية لتحسين كتابتك</h1>
+    <p class="lead">إذا كنت تكتب رسائل البريد الإلكتروني، أو المقالات، أو الأبحاث، أو المحتوى للعمل والدراسة، فمن المهم أن تكون كتابتك واضحة وخالية من الأخطاء. وهنا يأتي دور Grammarly، وهي أداة تساعدك على تحسين كتابتك أثناء الكتابة، من خلال اقتراحات تتعلق بالقواعد والإملاء وعلامات الترقيم والوضوح والأسلوب والنبرة.</p>
+
+    <div class="demo">
+      <small>جرّب بنفسك: اضغط على الكلمة الملوّنة بخط متعرّج لقبول التصحيح</small>
+      <p class="sentence" id="sentence">
+        She <button class="fix" data-ok="has">have</button> sent the
+        <button class="fix" data-ok="report">reprot</button> yesterday<button class="fix" data-ok=".">,</button>
+      </p>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </div>
+
+    <a class="btn" href="https://www.grammarly.com" target="_blank" rel="noopener">جرّب Grammarly</a>
+  </div>
+
+  <section id="about">
+    <h2>ما هو Grammarly؟</h2>
+    <p class="text">Grammarly هو مساعد للكتابة يعتمد على تقنيات الذكاء الاصطناعي لمساعدة المستخدم على كتابة نصوص أكثر وضوحًا وتنظيمًا.</p>
+    <p class="text" style="margin-top:12px">يمكنه اكتشاف العديد من الأخطاء أثناء الكتابة، واقتراح تعديلات تساعد على تحسين الجمل وجعلها أكثر وضوحًا واختصارًا، مع إمكانية قبول الاقتراح أو تجاهله.</p>
+  </section>
+
+  <section id="features">
+    <h2>أهم ما يقدمه Grammarly</h2>
+    <div class="cols">
+      <div>
+        <h3>تصحيح الأخطاء</h3>
+        <p>يساعد على اكتشاف الأخطاء المتعلقة بالقواعد والإملاء وعلامات الترقيم وبعض الكلمات التي قد يتم استخدامها بشكل غير صحيح.</p>
+      </div>
+      <div>
+        <h3>تحسين وضوح النص</h3>
+        <p>إذا كانت الجملة طويلة أو معقدة، يقدم اقتراحات لجعلها أكثر وضوحًا وسهولة في القراءة.</p>
+      </div>
+      <div>
+        <h3>إعادة صياغة الجمل</h3>
+        <p>يوفر أدوات لإعادة صياغة الجمل والفقرات، مع إمكانية تعديل الأسلوب ليصبح أكثر وضوحًا أو احترافية أو ملاءمة للسياق.</p>
+      </div>
+      <div>
+        <h3>اختيار النبرة المناسبة</h3>
+        <p>يقدم اقتراحات تساعد على جعل النص أكثر ملاءمة للنبرة التي تريدها، مثل النبرة الرسمية أو الودية أو الواثقة.</p>
+      </div>
+      <div>
+        <h3>أدوات الذكاء الاصطناعي</h3>
+        <p>مجموعة أدوات تساعد في إنشاء المسودات، وإعادة صياغة النصوص، وتطوير الأفكار وتحسين الكتابة.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="free">
+    <h2>هل Grammarly مجاني؟</h2>
+    <p class="text">نعم، يوجد إصدار مجاني من Grammarly يمكنك استخدامه دون مدة زمنية محددة، كما توجد خطط مدفوعة توفر إمكانات إضافية.</p>
+    <p class="text" style="margin-top:12px">وتذكر Grammarly رسميًا أن الإصدار المجاني يمكن استخدامه طالما تريد، بينما توفر الخطط المدفوعة مزايا إضافية للكتابة. لذلك يمكنك البدء بالإصدار المجاني والتعرف على الأداة قبل التفكير في الاشتراك المدفوع.</p>
+  </section>
+
+  <section id="arabic">
+    <h2>هل يدعم Grammarly اللغة العربية؟</h2>
+    <p class="text" style="margin-bottom:20px">هذه نقطة مهمة للمستخدم العربي. بحسب قائمة اللغات الرسمية الحالية لدى Grammarly، يدعم البرنامج اقتراحات الكتابة في الإنجليزية وعدد من اللغات الأخرى، مثل الإسبانية والفرنسية والألمانية والإيطالية والبرتغالية والتركية واليابانية والكورية والصينية وغيرها.</p>
+    <div class="note">
+      <p><strong>العربية ليست ضمن قائمة اللغات التي يقدم لها Grammarly حاليًا اقتراحات التصحيح النحوي والإملائي.</strong></p>
+      <p style="margin-top:12px;color:var(--muted)">لذلك إذا كنت تبحث عن أداة لتصحيح النص العربي تحديدًا، فلا ينبغي اعتبار Grammarly أداة مخصصة لذلك في الوقت الحالي. أما إذا كنت تكتب باللغة الإنجليزية أو إحدى اللغات المدعومة، فيمكن أن يكون مفيدًا لتحسين الكتابة واكتشاف الأخطاء.</p>
+    </div>
+  </section>
+
+  <section id="who">
+    <h2>لمن يمكن أن يكون Grammarly مفيدًا؟</h2>
+    <p class="text">يناسب كثيرًا من الأشخاص الذين يكتبون باللغة الإنجليزية أو اللغات المدعومة، مثل:</p>
+    <ul class="who">
+      <li>الطلاب والباحثين</li>
+      <li>الموظفين وكتّاب رسائل البريد الإلكتروني</li>
+      <li>أصحاب المواقع والمدونات</li>
+      <li>العاملين في التسويق وصناعة المحتوى</li>
+      <li>أصحاب الأعمال والمشاريع</li>
+      <li>من يريدون تحسين كتابتهم بالإنجليزية</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>ابدأ باستخدام Grammarly</h2>
+    <p class="text" style="margin-inline:auto">إذا كنت تكتب بشكل متكرر وتريد أداة تساعدك على اكتشاف الأخطاء وتحسين وضوح النصوص وإعادة صياغة الجمل، يمكنك تجربة Grammarly والاطلاع على الأدوات المتاحة في الإصدار المجاني والخطط المدفوعة.</p>
+    <a class="btn" href="https://www.grammarly.com" target="_blank" rel="noopener">جرّب Grammarly وابدأ بتحسين كتابتك اليوم</a>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">محتوى تعريفي عن Grammarly. تحقق من الموقع الرسمي للحصول على أحدث المعلومات عن اللغات والخطط.</div>
+</footer>
+
+<script>
+  const fixes = document.querySelectorAll('.fix');
+  const status = document.getElementById('status');
+  fixes.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('done')) return;
+      btn.textContent = btn.dataset.ok;
+      btn.classList.add('done');
+      const left = document.querySelectorAll('.fix:not(.done)').length;
+      status.textContent = left
+        ? 'تم قبول الاقتراح. متبقٍ ' + left + ' من الاقتراحات.'
+        : 'ممتاز! أصبحت الجملة خالية من الأخطاء.';
+    });
+  });
+</script>
+</body>
+</html>
